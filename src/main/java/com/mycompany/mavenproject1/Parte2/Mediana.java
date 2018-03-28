@@ -20,6 +20,11 @@ public class Mediana {
        if(vetor.length == 0){
                throw new Exception("Erro vetor e vazio");
        }
+       int aux = vetor.length%2;
+       if(aux != 0){
+           int meio = vetor.length/2;
+           return vetor[meio];
+       }
        return 0;
     }
     
