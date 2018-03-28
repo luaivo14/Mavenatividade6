@@ -17,28 +17,15 @@ import static org.junit.Assert.*;
  */
 public class TesteMediana {
     
-    public TesteMediana() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+   @Test
+     public void testvetorNulo() {
+        double vetor[]= null;
+        Mediana mediana = new Mediana();
+        try {
+            double res = mediana.acharMediana(vetor);
+            fail();
+        } catch (Exception ex) {
+            assertEquals("Erro vetor e nulo", ex.getMessage());
+        }
+     }
 }
