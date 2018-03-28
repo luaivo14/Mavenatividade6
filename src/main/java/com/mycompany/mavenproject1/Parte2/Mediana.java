@@ -20,6 +20,16 @@ public class Mediana {
        if(vetor.length == 0){
                throw new Exception("Erro vetor e vazio");
        }
+       double aux2=0;
+       for (int i = 0; i < vetor.length; i++) {
+            for (int j = 0; j < vetor.length - 1; j++) {
+                if (vetor[j] > vetor[j + 1]) {
+                    aux2 = vetor[j];
+                    vetor[j] = vetor[j + 1];
+                    vetor[j + 1] = aux2;
+                }
+            }
+        }
        int aux = vetor.length%2;
        if(aux != 0){
            int meio = vetor.length/2;
