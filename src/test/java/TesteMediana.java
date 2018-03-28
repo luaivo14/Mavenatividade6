@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import com.mycompany.mavenproject1.Parte2.Mediana;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -26,6 +27,17 @@ public class TesteMediana {
             fail();
         } catch (Exception ex) {
             assertEquals("Erro vetor e nulo", ex.getMessage());
+        }
+     }
+    @Test
+     public void testvetorVazio() {
+        double vetor[]= {};
+        Mediana mediana = new Mediana();
+        try {
+            double res = mediana.acharMediana(vetor);
+            fail();
+        } catch (Exception ex) {
+            assertEquals("Erro vetor e vazio", ex.getMessage());
         }
      }
 }
