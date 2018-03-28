@@ -47,4 +47,11 @@ public class TesteMediana {
         double res = mediana.acharMediana(vetor);
         assertEquals(3.00,res,0.01);
      }
+     @Test
+     public void acharMedianaimparDesordenado() throws Exception {
+        double vetor[]= {2,3,1,4,5};
+        Mediana mediana = new Mediana();
+        double res = mediana.acharMediana(vetor);
+        assertEquals(3.00,res,0.01);
+     }
 }
